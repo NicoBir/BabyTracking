@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_baby"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Baby" />
+
+    <TextView
+        android:id="@+id/text_milestones"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/holo_purple"
+        android:text="Baby's Milestones" />
+
+    <TextView
+        android:id="@+id/text_breast"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Breastfeeding" />
+
+    <TextView
+        android:id="@+id/text_sleep"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/holo_red_dark"
+        android:text="Sleep"
+        android:onClick="open_sleep"/>
+
+    <TextView
+        android:id="@+id/text_diapers"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/holo_green_dark"
+        android:text="Diapers" />
+
+
+</LinearLayout>
