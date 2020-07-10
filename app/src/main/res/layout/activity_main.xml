@@ -11,7 +11,13 @@
         android:id="@+id/text_baby"
         style="@style/MainMenu_Style"
         android:background="@android:color/holo_blue_dark"
-        android:text="Baby" />
+        android:text="Baby's information" />
+
+    <TextView
+        android:id="@+id/text_health"
+        style="@style/MainMenu_Style"
+        android:background="@android:color/darker_gray"
+        android:text="Baby's Health" />
 
     <TextView
         android:id="@+id/text_milestones"
@@ -29,8 +35,7 @@
         android:id="@+id/text_sleep"
         style="@style/MainMenu_Style"
         android:background="@android:color/holo_red_dark"
-        android:text="Sleep"
-        android:onClick="open_sleep"/>
+        android:text="Sleep"/>
 
     <TextView
         android:id="@+id/text_diapers"
