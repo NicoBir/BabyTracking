@@ -29,13 +29,13 @@ jobs:
           java-version: 1.8
 
       - name: Run Kotlin Linter
-        run: ./gradlew ktlintStagingDebugCheck
+        run: ./gradlew ktlintCheck
 
       - name: Run Android Linter
         run: ./gradlew lint
 
       - name: Run Unit Tests
-        run: ./gradlew testStagingDebugUnitTest
+        run: ./gradlew test
 
       - name: Assemble Debug APK
         run: ./gradlew assembleDebug
