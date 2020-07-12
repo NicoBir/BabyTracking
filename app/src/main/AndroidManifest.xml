@@ -11,7 +11,11 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BabyActivity"
-            android:label="Baby">
+            android:label="Baby's Information">
+        </activity>
+        <activity
+            android:name=".HealthActivity"
+            android:label="Baby's Health">
         </activity>
         <activity
             android:name=".BreastActivity"
@@ -23,7 +27,7 @@
         </activity>
         <activity
             android:name=".MilestoneActivity"
-            android:label="Milestone">
+            android:label="Baby's Milestones">
         </activity>
         <activity
             android:name=".SleepActivity"

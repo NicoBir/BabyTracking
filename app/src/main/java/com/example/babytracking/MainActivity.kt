@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.room.Room
+import com.example.babytracking.data.BabyRoomDatabase
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val baby = findViewById(R.id.text_baby) as TextView
+        val health = findViewById(R.id.text_health) as TextView
         val milestones = findViewById(R.id.text_milestones) as TextView
         val breast = findViewById(R.id.text_breast) as TextView
         val sleep = findViewById(R.id.text_sleep) as TextView
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         baby.setOnClickListener {
             val babyIntent = Intent(this@MainActivity, BabyActivity::class.java)
             startActivity(babyIntent)
+        }
+
+        health.setOnClickListener {
+            val healthIntent = Intent(this@MainActivity, HealthActivity::class.java)
+            startActivity(healthIntent)
         }
 
         milestones.setOnClickListener {

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BabyActivity">
+    tools:context=".HealthActivity">>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,13 +14,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First name" />
+            android:text="Health's Condition" />
 
         <EditText
-            android:id="@+id/edit_baby_firstname"
+            android:id="@+id/edit_health_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter First Name"
+            android:hint="Enter Health"
             android:inputType="textCapWords" />
     </LinearLayout>
 
@@ -32,13 +32,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last name" />
+            android:text="Height" />
 
         <EditText
-            android:id="@+id/edit_baby_lastname"
+            android:id="@+id/edit_health_height"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Last Name"
+            android:hint="Enter Height"
             android:inputType="textCapWords" />
     </LinearLayout>
 
@@ -50,13 +50,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date of Birth" />
+            android:text="Weight" />
 
         <EditText
-            android:id="@+id/edit_baby_date"
+            android:id="@+id/edit_health_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Date"
+            android:hint="Enter Weight"
             android:inputType="textCapWords" />
     </LinearLayout>
 
