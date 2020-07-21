@@ -1,90 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SleepActivity">
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="At wich hour?" />
-
-        <EditText
-            android:id="@+id/sleep_hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter Hour"
-            android:inputType="textCapWords" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="For how long?" />
-
-        <EditText
-            android:id="@+id/sleep_length"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter Time"
-            android:inputType="textCapWords" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How was the baby's sleep?" />
-
-        <EditText
-            android:id="@+id/sleep_quality"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter Quality of Sleep"
-            android:inputType="textCapWords" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Did the baby need a lullaby to sleep?" />
-
-        <Spinner
-            android:id="@+id/spinner_sleep_lullaby"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:paddingRight="16dp"
-            android:spinnerMode="dropdown" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/sleep_button_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Save" />
-
-
-</LinearLayout>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent">
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id = "@+id/sleep_button_edit"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentBottom = "true"
+        android:layout_gravity = "center_horizontal"
+        android:src = "@drawable/ic_add" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+        
+        
+        
+    </androidx.recyclerview.widget.RecyclerView>
+    
+</RelativeLayout>

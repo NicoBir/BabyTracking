@@ -1,4 +1,4 @@
-package com.example.babytracking
+package com.nicoBir.babytracking
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

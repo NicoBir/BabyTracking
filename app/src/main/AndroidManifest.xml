@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.babytracking">
+    package="com.nicoBir.babytracking">
 
     <application
         android:allowBackup="true"
@@ -10,30 +10,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".BabyActivity"
+            android:name="com.nicoBir.babytracking.ui.BabyActivity"
             android:label="Baby's Information">
         </activity>
         <activity
-            android:name=".HealthActivity"
+            android:name="com.nicoBir.babytracking.ui.HealthActivity"
             android:label="Baby's Health">
         </activity>
         <activity
-            android:name=".BreastActivity"
+            android:name="com.nicoBir.babytracking.ui.BreastActivity"
             android:label="Breast">
         </activity>
         <activity
-            android:name=".DiaperActivity"
+            android:name="com.nicoBir.babytracking.ui.DiaperActivity"
             android:label="Diaper">
         </activity>
         <activity
-            android:name=".MilestoneActivity"
+            android:name="com.nicoBir.babytracking.ui.MilestoneActivity"
             android:label="Baby's Milestones">
         </activity>
         <activity
-            android:name=".SleepActivity"
+            android:name="com.nicoBir.babytracking.ui.SleepActivity"
             android:label="sleep">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="com.nicoBir.babytracking.ui.SleepEditActivity"
+            android:label="edit sleep">
+        </activity>
+        <activity android:name="com.nicoBir.babytracking.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

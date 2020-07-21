@@ -1,4 +1,4 @@
-package com.example.babytracking
+package com.nicoBir.babytracking
 
 import org.junit.Assert.*
 import org.junit.Test

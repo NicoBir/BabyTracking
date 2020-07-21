@@ -2,6 +2,7 @@
     <string name="app_name">BabyTracking</string>
     <string name="yes_string">Yes</string>
     <string name="no_string">No</string>
-    <string name="left_breast_string">Left Breast</string>
-    <string name="right_breast_string">Right Breast</string>
+    <string name="left_breast">Left Breast</string>
+    <string name="right_breast">Right Breast</string>
+    <string name="unknown_breast">Unknown</string>
 </resources>
