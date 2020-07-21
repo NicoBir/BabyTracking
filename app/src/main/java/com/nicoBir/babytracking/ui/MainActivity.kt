@@ -1,55 +1,55 @@
-package com.example.babytracking
+package com.nicoBir.babytracking.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Room
-import com.example.babytracking.data.BabyRoomDatabase
+import com.nicoBir.babytracking.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-        val baby = findViewById(R.id.text_baby) as TextView
-        val health = findViewById(R.id.text_health) as TextView
-        val milestones = findViewById(R.id.text_milestones) as TextView
-        val breast = findViewById(R.id.text_breast) as TextView
-        val sleep = findViewById(R.id.text_sleep) as TextView
-        val diapers = findViewById(R.id.text_diapers) as TextView
-
-
-        baby.setOnClickListener {
+        
+        
+        /*val baby: TextView = findViewById(R.id.text_baby)
+        val health: TextView = findViewById(R.id.text_health)
+        val milestones: TextView = findViewById(R.id.text_milestones)
+        val breast: TextView = findViewById(R.id.text_breast)
+        val sleep: TextView = findViewById(R.id.text_sleep)
+        val diapers: TextView= findViewById(R.id.text_diapers)*/
+    
+    
+        text_baby.setOnClickListener {
             val babyIntent = Intent(this@MainActivity, BabyActivity::class.java)
             startActivity(babyIntent)
         }
-
-        health.setOnClickListener {
+    
+        text_health.setOnClickListener {
             val healthIntent = Intent(this@MainActivity, HealthActivity::class.java)
             startActivity(healthIntent)
         }
-
-        milestones.setOnClickListener {
+    
+        text_milestones.setOnClickListener {
             val milestonesIntent = Intent(this@MainActivity, MilestoneActivity::class.java)
             startActivity(milestonesIntent)
         }
-
-        breast.setOnClickListener {
+    
+        text_breast.setOnClickListener {
             val breastIntent = Intent(this@MainActivity, BreastActivity::class.java)
             startActivity(breastIntent)
         }
-
-        sleep.setOnClickListener {
-            val sleepIntent = Intent(this@MainActivity, SleepActivity::class.java)
+    
+        text_sleep.setOnClickListener {
+            val sleepIntent = Intent(this@MainActivity, SleepEditActivity::class.java)
             startActivity(sleepIntent)
         }
-
-        diapers.setOnClickListener {
+    
+        text_diapers.setOnClickListener {
             val diaperIntent = Intent(this@MainActivity, DiaperActivity::class.java)
             startActivity(diaperIntent)
         }
-
+        
     }
 }

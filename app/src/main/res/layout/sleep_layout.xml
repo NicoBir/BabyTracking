@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SleepActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is where we will talk about the sleep of the baby"/>
-
-</LinearLayout>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent">
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id = "@+id/sleep_button_edit"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentRight = "true"
+        android:layout_alignParentBottom = "true"
+        android:layout_gravity = "center_horizontal"
+        android:src = "@drawable/ic_add" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent">
+        
+        
+        
+    </androidx.recyclerview.widget.RecyclerView>
+    
+</RelativeLayout>

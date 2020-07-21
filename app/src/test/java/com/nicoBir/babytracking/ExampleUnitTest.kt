@@ -1,8 +1,8 @@
-package com.example.babytracking
-
-import org.junit.Test
+package com.nicoBir.babytracking
 
 import org.junit.Assert.*
+import org.junit.Test
+
 
 /**
  * Example local unit test, which will execute on the development machine (host).

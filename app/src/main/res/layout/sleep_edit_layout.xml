@@ -4,25 +4,28 @@
               android:layout_width = "match_parent"
               android:layout_height = "match_parent"
               android:orientation = "vertical"
-              tools:context = ".ui.BreastActivity">
+              tools:context = ".ui.SleepEditActivity">
 
 
     <LinearLayout
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:orientation = "horizontal">
+        
+       
 
         <TextView
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:paddingTop = "95dp"
             android:text = "At what time?" />
-
+        
         <TimePicker
             android:id = "@+id/sleep_timepick_hour"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:timePickerMode = "spinner" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -36,11 +39,11 @@
             android:text = "For how long?" />
 
         <EditText
-            android:id = "@+id/breast_length"
+            android:id = "@+id/sleep_length"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:hint = "Enter time (in minutes)"
-            android:inputType = "number" />
+            android:hint = "Enter Time (in hour)"
+            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
@@ -51,57 +54,41 @@
         <TextView
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:text = "At which breast?" />
+            android:text = "How was the baby's sleep?" />
 
-        <Spinner
-            android:id = "@+id/spinner_breast"
+        <EditText
+            android:id = "@+id/sleep_quality"
             android:layout_width = "wrap_content"
-            android:layout_height = "48dp"
+            android:layout_height = "wrap_content"
+            android:hint = "Enter Quality of Sleep"
+            android:inputType = "textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation = "horizontal">
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
             android:paddingRight = "16dp"
-            android:spinnerMode = "dropdown" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:orientation = "horizontal">
-
-        <TextView
+            android:text = "Did the baby need a lullaby to sleep?" />
+    
+ 
+        <CheckBox
+            android:id = "@+id/sleep_check_lullaby"
             android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:text = "How was the session for the baby?" />
-
-        <EditText
-            android:id = "@+id/breast_baby"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:hint = "Enter Quality"
-            android:inputType = "textCapWords" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:orientation = "horizontal">
-
-        <TextView
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:text = "How was the session for the mother?" />
-
-        <EditText
-            android:id = "@+id/breast_mother"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:hint = "Enter Quality"
-            android:inputType = "textCapWords" />
+            android:layout_height = "wrap_content" />
+        
     </LinearLayout>
 
     <Button
-        android:id = "@+id/breast_button_save"
+        android:id = "@+id/sleep_button_save"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_gravity = "center_horizontal"
         android:text = "Save" />
+
 
 </LinearLayout>

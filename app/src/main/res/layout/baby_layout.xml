@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BabyActivity">
+    tools:context=".ui.BabyActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
             android:text="First name" />
 
         <EditText
-            android:id="@+id/edit_baby_firstname"
+            android:id="@+id/baby_firstname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter First Name"
@@ -35,7 +35,7 @@
             android:text="Last name" />
 
         <EditText
-            android:id="@+id/edit_baby_lastname"
+            android:id="@+id/baby_lastname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter Last Name"
@@ -53,7 +53,7 @@
             android:text="Date of Birth" />
 
         <EditText
-            android:id="@+id/edit_baby_date"
+            android:id="@+id/baby_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter Date"
