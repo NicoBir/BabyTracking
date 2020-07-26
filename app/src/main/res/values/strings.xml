@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">BabyTracking</string>
+    <string name="save_button">Save</string>
     <string name="yes_string">Yes</string>
     <string name="no_string">No</string>
-    <string name="left_breast_string">Left Breast</string>
-    <string name="right_breast_string">Right Breast</string>
+    <string name="left_breast">Left Breast</string>
+    <string name="right_breast">Right Breast</string>
+    <string name="unknown_breast">Unknown</string>
+    <string name="date_text">Set date</string>
+    <string name="time_text">Set time</string>
+    <string name="length_text">For how long?</string>
+    <string name="breast_length_edit">Enter time (in minutes)</string>
+    <string name="breast_which_text">At which breast?</string>
+    <string name="breast_qual_baby_text">How was the session for the baby?</string>
+    <string name="breast_qual_mother_text">How was the session for the mother?</string>
+    <string name="breast_qual_edit">Enter quality</string>
+    <string name="sleep_length_edit">Enter time (in hours)</string>
+    <string name="sleep_qual_text">How was the baby\'s sleep?</string>
+    <string name="sleep_qual_edit">Enter quality of sleep</string>
+    <string name="sleep_lull_edit">Did the baby need a lullaby to sleep?</string>
 </resources>

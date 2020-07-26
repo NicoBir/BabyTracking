@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SleepActivity">
+    tools:context="com.example.babytracking.SleepActivity">
 
 
     <LinearLayout
@@ -15,14 +15,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="At wich hour?" />
+            android:text="@string/date_text"
+            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/sleep_hour"
+        <TextView
+            android:id="@+id/sleep_Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Hour"
-            android:inputType="textCapWords" />
+            android:padding="20dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -33,14 +34,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="For how long?" />
+            android:text="@string/time_text"
+            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/sleep_length"
+        <TextView
+            android:id="@+id/sleep_Time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Time"
-            android:inputType="textCapWords" />
+            android:padding="20dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -51,14 +53,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How was the baby's sleep?" />
+            android:text="@string/length_text"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/sleep_quality"
+            android:id="@+id/sleep_Length"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Quality of Sleep"
-            android:inputType="textCapWords" />
+            android:hint="@string/sleep_length_edit"
+            android:inputType="number"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,22 +73,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Did the baby need a lullaby to sleep?" />
+            android:text="@string/sleep_qual_text"
+            android:textSize="16sp" />
 
-        <Spinner
-            android:id="@+id/spinner_sleep_lullaby"
+        <EditText
+            android:id="@+id/sleep_Quality"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:paddingRight="16dp"
-            android:spinnerMode="dropdown" />
+            android:layout_height="wrap_content"
+            android:hint="@string/sleep_qual_edit"
+            android:inputType="text"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sleep_lull_edit"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/sleep_Check_Lullaby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/sleep_button_save"
+        android:id="@+id/sleep_Save_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Save" />
-
-
+        android:text="@string/save_button"
+        android:textSize="16sp" />
 </LinearLayout>

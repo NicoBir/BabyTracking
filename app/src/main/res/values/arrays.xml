@@ -16,7 +16,8 @@
         <item>@string/no_string</item>
     </string-array>
     <string-array name="array_breast">
-        <item>@string/left_breast_string</item>
-        <item>@string/right_breast_string</item>
+        <item>@string/unknown_breast</item>
+        <item>@string/left_breast</item>
+        <item>@string/right_breast</item>
     </string-array>
 </resources>

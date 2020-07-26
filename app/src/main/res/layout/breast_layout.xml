@@ -4,12 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BreastActivity">>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="heure, durée, a quel sein?, comment c'est passée la session?, pour la maman?(douloureux ou pas?)" />
+    tools:context=".BreastActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,14 +14,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="At wich hour?" />
+            android:text="@string/date_text"
+            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/breast_hour"
+        <TextView
+            android:id="@+id/breast_Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Hour"
-            android:inputType="textCapWords" />
+            android:padding="20dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -37,14 +33,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="For how long?" />
+            android:text="@string/time_text"
+            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/breast_length"
+        <TextView
+            android:id="@+id/breast_Time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Time"
-            android:inputType="textCapWords" />
+            android:padding="20dp"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,14 +52,37 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="At which breast?" />
+            android:text="@string/length_text"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/breast_Length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/breast_length_edit"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/breast_which_text"
+            android:textSize="16sp" />
 
         <Spinner
-            android:id="@+id/spinner_breast"
+            android:id="@+id/breast_Spinner"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
+            android:paddingEnd="16dp"
             android:paddingRight="16dp"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -73,14 +93,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How was the session for the baby?" />
+            android:text="@string/breast_qual_baby_text"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/breast_baby"
+            android:id="@+id/breast_Quality_Baby"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Quality"
-            android:inputType="textCapWords" />
+            android:hint="@string/breast_qual_edit"
+            android:inputType="text"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,21 +113,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="How was the session for the mother?" />
+            android:text="@string/breast_qual_mother_text"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/breast_mother"
+            android:id="@+id/breast_Quality_Mother"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Quality"
-            android:inputType="textCapWords" />
+            android:hint="@string/breast_qual_edit"
+            android:inputType="text"
+            android:textSize="16sp" />
     </LinearLayout>
+
 
     <Button
-        android:id="@+id/breast_button_save"
+        android:id="@+id/breast_Save_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Save" />
+        android:text="@string/save_button"
+        android:textSize="16sp" />
 
 </LinearLayout>

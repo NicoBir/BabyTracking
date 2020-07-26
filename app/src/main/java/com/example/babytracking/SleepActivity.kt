@@ -1,83 +1,89 @@
 package com.example.babytracking
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.text.TextUtils
-import android.view.View
-import android.widget.*
-import android.widget.AdapterView.OnItemSelectedListener
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.sleep_layout.*
+import java.sql.Timestamp
+import java.util.*
+
+
+/*
+This screen will allow to enter the data about the sleeping schedule of the baby.
+The first data required is the date and time when the session occurred.
+Those two are taken care of by the objects PickerSetup, which allow to pick the date and time,
+and TimeFormatter, which format the time so that we can read it.
+The other data that can be entered in this screen are how long did the baby sleep,
+how was their sleep and whether or not a lullaby was required to make them sleep.
+*/
 
 class SleepActivity : AppCompatActivity() {
 
-    var mLullaby: Boolean = false;
+    private var cal = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sleep_layout)
-        val saveButton = findViewById<Button>(R.id.sleep_button_save)
-        val hourEdit = findViewById<EditText>(R.id.sleep_hour)
-        val lengthEdit = findViewById<EditText>(R.id.sleep_length)
-        val qualityEdit = findViewById<EditText>(R.id.sleep_quality)
-        val mLullabySpinner: Spinner =
-            findViewById(com.example.babytracking.R.id.spinner_sleep_lullaby);
 
-        if (mLullabySpinner != null) {
-            val lullabySpinnerAdapter = ArrayAdapter.createFromResource(
-                this, R.array.array_yes_no,
-                android.R.layout.simple_spinner_item
-            )
-
-            // Specify dropdown layout style - simple list view with 1 item per line
-            lullabySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-            // Apply the adapter to the spinner
-            mLullabySpinner.adapter = lullabySpinnerAdapter
-
-
-            mLullabySpinner.onItemSelectedListener =
-                object : AdapterView.OnItemSelectedListener {
-                    override fun onItemSelected(
-                        parent: AdapterView<*>, view: View, pos: Int, id: Long
-                    ) {
-                        val selection = parent.getItemAtPosition(pos) as String
-                        if (!TextUtils.isEmpty(selection)) {
-                            if (selection == getString(R.string.no_string)) {
-                                mLullaby = false
-                            } else if (selection == getString(R.string.yes_string)) {
-                                mLullaby = true
-                            }
-
-                        }
-                    }
-
-                    // Because AdapterView is an abstract class, onNothingSelected must be defined
-                    override fun onNothingSelected(parent: AdapterView<*>?) {
-                        mLullaby = false
-                    }
-                }
+        PickerSetup.setupDatePicker(this, sleep_Date, cal)
+        PickerSetup.setupTimePicker(this, sleep_Time, cal)
+        sleep_Save_Button.setOnClickListener {
+            setupSaveButton()
         }
-
-        saveButton.setOnClickListener {
-            val hourText = hourEdit.text;
-            val lengthText = lengthEdit.text;
-            val qualText = qualityEdit.text;
-            var lulText = getString(R.string.no_string)
-
-
-            if (mLullaby == true) {
-                lulText = getString(R.string.yes_string)
-            } else {
-                lulText = getString(R.string.no_string)
-            }
-
-            Toast.makeText(
-                this@SleepActivity,
-                "Hour = " + hourText + ", \n Length = " + lengthText
-                        + ", \n Quality = " + qualText + ", \n Lullaby = " + lulText,
-                Toast.LENGTH_SHORT
-            ).show()
-        }
-
-
     }
+
+
+    @Suppress("DEPRECATION")
+    @SuppressLint("NewApi")
+    private fun setupSaveButton() {
+
+        val lengthText = sleep_Length.text.toString().trim()
+
+        if (lengthText.isEmpty()) {
+            sleep_Length.error = "Length of sleep required"
+            sleep_Length.requestFocus()
+            return}
+
+        val lengthInt: Int = lengthText.toInt()
+        val qualText: String = sleep_Quality.text.toString().trim()
+        val lulText: String = if (sleep_Check_Lullaby.isChecked()) "Yes" else "No"
+
+        val timestamp: Timestamp = TimeFormatter.makeTimeStamp(cal)
+        val date = Date(timestamp.time)
+
+         if (lengthInt <= 0) {
+            sleep_Length.error = "Time cannot be negative or null"
+            sleep_Length.requestFocus()
+            return
+        } else if (lengthInt > 24) {
+            sleep_Length.error = "Time cannot exceed 24 hours"
+            sleep_Length.requestFocus()
+            return
+        }
+
+        if (qualText.isEmpty()) {
+            sleep_Quality.error = "Quality of sleep required"
+            sleep_Quality.requestFocus()
+            return
+        }
+
+        val userInput =
+            """
+            TimeStamp = $timestamp
+            Date = ${TimeFormatter.formatDate(date)}
+            Hour = ${TimeFormatter.formatHour(timestamp.hours, timestamp.minutes)}
+            Length = $lengthInt
+            Quality of sleep = $qualText
+            Lullaby? = $lulText
+            """
+
+        Toast.makeText(
+            this@SleepActivity,
+            userInput,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
 }
+
